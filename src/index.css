@@ -33,3 +33,10 @@
     --angle: 360deg;
   }
 }
+
+/* Custom scrollbar styles using tailwind-scrollbar plugin utilities */
+.custom-scrollbar {
+  @apply scrollbar-thin scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031]; /* Blue-gray thumb, very dark blue-gray track */
+}
+
+
