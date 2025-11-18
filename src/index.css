@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hero-image-container {
+    position: relative;
+    border-radius: 9999px; /* rounded-full equivalent */
+    padding: 4px; /* Adjusted padding to control border thickness */
+    background: conic-gradient(from var(--angle), #8B5CF6, #EC4899, #F59E0B, #8B5CF6);
+    animation: spin 3s linear infinite;
+    display: inline-block; /* To make the background fit the content */
+  }
+
+  .hero-image-container img {
+    border-radius: 9999px; /* rounded-full equivalent */
+    display: block; /* Remove extra space below image */
+    background-color: #dbdcd5; /* To cover the center of the gradient and make it a border */
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
