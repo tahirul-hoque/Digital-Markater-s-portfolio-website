@@ -62,7 +62,7 @@ function App() {
               
             </div>
             <div className="flex flex-wrap justify-center lg:justify-around gap-8 stagger">
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-brands fa-google fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -74,7 +74,7 @@ function App() {
                 </div>
               </AnimatedCard>
 
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-magnifying-glass-chart fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -87,7 +87,7 @@ function App() {
               </AnimatedCard>
 
               {/* Card 7: Facebook Ad Campaign */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-brands fa-facebook fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -100,7 +100,7 @@ function App() {
               </AnimatedCard>
 
               {/* Card 3: Editor */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-pen-to-square fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -112,7 +112,7 @@ function App() {
                 </div>
               </AnimatedCard>
 
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-palette fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -124,7 +124,7 @@ function App() {
                 </div>
               </AnimatedCard>
 
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-feather-pointed fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -136,7 +136,7 @@ function App() {
                 </div>
               </AnimatedCard>
 
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-flask fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -164,7 +164,7 @@ function App() {
             </div>
             <div className="flex flex-wrap justify-center lg:justify-around gap-8 stagger">
               {/* Testimonial Card 1 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Bro, honestly I'm really impressed with the way you handled the ad campaign. The targeting, planning and the results were way better than expected. Your dedication and professionalism are truly commendable. Looking forward to working with you again in the future."
@@ -173,7 +173,7 @@ function App() {
               </AnimatedCard>
 
               {/* Testimonial Card 2 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Working with Fahmiduzzaman was a game-changer for our online presence. Our search engine rankings have improved dramatically, and. We're seeing a consistent increase in organic traffic. The SEO strategy was clear, effective, and delivered real, measurable results."
@@ -182,7 +182,7 @@ function App() {
               </AnimatedCard>
 
               {/* Testimonial Card 3 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The new brand identity and website design are stunning. It perfectly captures our company's ethos and has received amazing feedback from our customers. The attention to detail and creative vision were exceptional."
@@ -191,7 +191,7 @@ function App() {
               </AnimatedCard>
 
               {/* Testimonial Card 4 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The quality of the content writing is top-notch. Every blog post and piece of copy is well-researched, engaging, and perfectly aligned with our brand voice. Our content marketing has never been stronger."
@@ -200,7 +200,7 @@ function App() {
               </AnimatedCard>
 
               {/* Testimonial Card 5 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-.center">
                   <p className="text-white italic mb-4">
                     "From social media management to running complex ad campaigns, the level of expertise is outstanding. We've seen significant growth in engagement and conversions across all platforms. A true professional and a valuable partner."
@@ -209,7 +209,7 @@ function App() {
               </AnimatedCard>
 
               {/* Testimonial Card 6 */}
-              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/50 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <AnimatedCard className="relative overflow-hidden transition-transform transition-shadow duration-150 ease-in-out hover:scale-105 hover:-translate-y-1 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The initial consultation and strategy session alone were incredibly valuable. The insights provided helped us refocus our marketing efforts and create a clear roadmap for success. Highly recommended for anyone looking for strategic guidance."
