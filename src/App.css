@@ -21,6 +21,4 @@
 .stagger > .fade-in:nth-child(9) { transition-delay: 0.9s; }
 .stagger > .fade-in:nth-child(10) { transition-delay: 1.0s; }
 
-.card-hover-effect:hover {
-  transform: translateY(-5px) scale(1.05);
-}
+

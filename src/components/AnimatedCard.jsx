@@ -7,7 +7,7 @@ const AnimatedCard = ({ children, className }) => {
   return (
     <div
       ref={ref}
-      className={`fade-in ${isVisible ? 'visible' : ''} ${className} card-hover-effect`}
+      className={`fade-in ${isVisible ? 'visible' : ''} ${className}`}
     >
       {children}
     </div>
