@@ -1,19 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import withbg from '/fahim withbg.jpg'
-import withoutbg from '/fahim withoutbg.jpg'
-import useIntersectionObserver from './hooks/useIntersectionObserver'
-import AnimatedCard from './components/AnimatedCard'
 import Navbar from './components/Navbar'
-import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [heroRef, isHeroVisible] = useIntersectionObserver({ threshold: 0.1 });
-
   return (
     <>
       <Navbar />
@@ -22,7 +12,7 @@ function App() {
       <div className="h-screen overflow-y-auto custom-scrollbar scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031]">
 
         {/* Hero-section */}
-        <div id="home" ref={heroRef} className={`pt-24 min-h-screen flex items-center p-4 bg-[#0e162a] fade-in ${isHeroVisible ? 'visible' : ''}`}>
+        <div id="home" className={`pt-24 min-h-screen flex items-center p-4 bg-[#0e162a]`}>
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-24">
               {/* Image Section (now first) */}
@@ -61,8 +51,8 @@ function App() {
               <h2 className="text-4xl font-extrabold text-white text-center lg:text-left">My Services</h2>
               
             </div>
-            <div className="flex flex-wrap justify-center lg:justify-around gap-8 stagger">
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+            <div className="flex flex-wrap justify-center lg:justify-around gap-8">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-brands fa-google fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -72,9 +62,9 @@ function App() {
                     Optimizing your campaigns to maximize ROI and drive targeted traffic with data-driven precision.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-magnifying-glass-chart fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -84,23 +74,23 @@ function App() {
                     Enhancing your social presence to improve search rankings and connect with your audience effectively.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Card 7: Facebook Ad Campaign */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-brands fa-facebook fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
                     Facebook Ad Campaign
                   </h3>
-                  <p className="text-white">
+                  <ag className="text-white">
                     Managing targeted ad campaigns on Facebook to reach your ideal customers and grow your business.
-                  </p>
+                  </ag>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Card 3: Editor */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-pen-to-square fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -110,9 +100,9 @@ function App() {
                     Polishing your content to ensure clarity, coherence, and impact, making every word count.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-palette fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -122,9 +112,9 @@ function App() {
                     Creating visually stunning assets that capture your brand’s essence and engage your audience.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-feather-pointed fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -134,9 +124,9 @@ function App() {
                     Crafting compelling narratives and copy that resonate with your audience and inspire action.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
                 <div className="text-center">
                   <i className="fa-solid fa-flask fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -146,7 +136,7 @@ function App() {
                     Diving deep into market trends and data to uncover insights that drive strategy and innovation.
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
             </div>
           </div>
         </div>
@@ -162,63 +152,64 @@ function App() {
                 Hear directly from clients who have experienced significant growth and results.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center lg:justify-around gap-8 stagger">
+            <div className="flex flex-wrap justify-center lg:justify-around gap-8">
               {/* Testimonial Card 1 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Bro, honestly I'm really impressed with the way you handled the ad campaign. The targeting, planning and the results were way better than expected. Your dedication and professionalism are truly commendable. Looking forward to working with you again in the future."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Testimonial Card 2 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Working with Fahmiduzzaman was a game-changer for our online presence. Our search engine rankings have improved dramatically, and. We're seeing a consistent increase in organic traffic. The SEO strategy was clear, effective, and delivered real, measurable results."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Testimonial Card 3 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The new brand identity and website design are stunning. It perfectly captures our company's ethos and has received amazing feedback from our customers. The attention to detail and creative vision were exceptional."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Testimonial Card 4 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The quality of the content writing is top-notch. Every blog post and piece of copy is well-researched, engaging, and perfectly aligned with our brand voice. Our content marketing has never been stronger."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Testimonial Card 5 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
-                <div className="text-.center">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+                <div className="text-center">
                   <p className="text-white italic mb-4">
                     "From social media management to running complex ad campaigns, the level of expertise is outstanding. We've seen significant growth in engagement and conversions across all platforms. A true professional and a valuable partner."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
 
               {/* Testimonial Card 6 */}
-              <AnimatedCard className="transition-transform duration-150 ease-in-out hover:scale-105 bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The initial consultation and strategy session alone were incredibly valuable. The insights provided helped us refocus our marketing efforts and create a clear roadmap for success. Highly recommended for anyone looking for strategic guidance."
                   </p>
                 </div>
-              </AnimatedCard>
+              </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )
