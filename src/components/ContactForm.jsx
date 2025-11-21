@@ -12,12 +12,30 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send to an API, display a success message)
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "74b3a981-7fdd-4511-b4e0-1472c625d163",
+        ...formData
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      console.log('Form submitted:', formData);
+      alert('Thank you for your message! I will get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -35,6 +53,7 @@ const ContactForm = () => {
             <label htmlFor="name" className="block text-white text-sm font-bold mb-2">
               Name
             </label>
+
             <input
               type="text"
               id="name"
