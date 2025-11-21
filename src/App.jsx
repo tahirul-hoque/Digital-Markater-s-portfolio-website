@@ -1,6 +1,7 @@
 import withbg from '/fahim withbg.jpg'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 
 
 function App() {
@@ -17,24 +18,24 @@ function App() {
             <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-24">
               {/* Image Section (now first) */}
               <div className='hero-image-container'>
-                <img src={withbg} alt="digital marketer's profile" className='w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] lg:w-[35rem] lg:h-[35rem] xl:w-[40rem] xl:h-[40rem] rounded-full '/>
+                <img src={withbg} alt="digital marketer's profile" className='w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] lg:w-[35rem] lg:h-[35rem] xl:w-[40rem] xl:h-[40rem] rounded-full ' />
               </div>
 
               {/* Text Section (now second) */}
               <div className="border-4 border-[#5f83cc] p-10 rounded-lg text-center lg:text-left lg:max-w-2xl xl:max-w-4xl xl:p-14">
                 <div className="flex flex-col gap-4">
                   <div>
-                    <span className='font-sans text-lg font-thin text-[#5f83cc]'>Hey, I'm Fahmiduzzaman Fahim,</span> <br/>
+                    <span className='font-sans text-lg font-thin text-[#5f83cc]'>Hey, I'm Fahmiduzzaman Fahim,</span> <br />
                     <span className='font-sans text-3xl md:text-3xl font-extrabold text-white'>
-                      A Digital Marketing <br/> Architect with 5+ years of experience
+                      A Digital Marketing <br /> Architect with 5+ years of experience
                     </span>
                   </div>
                   <div className='font-normal text-white'>
                     focused on building impactful brand identities and high-performing <br /> marketing systems. I specialize in creating data-driven strategies, <br /> compelling ad creatives, and optimized digital experiences that help <br /> businesses scale with confidence.
 
-    With expertise across social media <br /> marketing, paid campaigns, SEO, and brand design, I combine <br /> creativity with analytics to deliver work that captivates audiences <br /> and achieves real results. My approach is simple—understand <br /> the brand, design smart solutions, and execute with precision. <br />
+                    With expertise across social media <br /> marketing, paid campaigns, SEO, and brand design, I combine <br /> creativity with analytics to deliver work that captivates audiences <br /> and achieves real results. My approach is simple—understand <br /> the brand, design smart solutions, and execute with precision. <br />
 
-    I’m passionate about transforming ideas into meaningful digital <br /> outcomes that elevate brands in today’s competitive market.
+                    I’m passionate about transforming ideas into meaningful digital <br /> outcomes that elevate brands in today’s competitive market.
                   </div>
                 </div>
               </div>
@@ -49,7 +50,7 @@ function App() {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="text-center mb-12 lg:text-left lg:pl-8">
               <h2 className="text-4xl font-extrabold text-white text-center lg:text-left">My Services</h2>
-              
+
             </div>
             <div className="flex flex-wrap justify-center lg:justify-around gap-8">
               <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
@@ -209,6 +210,7 @@ function App() {
             </div>
           </div>
         </div>
+        <ContactForm />
         <Footer />
       </div>
     </>
