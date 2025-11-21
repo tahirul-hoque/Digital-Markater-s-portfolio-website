@@ -5,17 +5,21 @@
 @layer utilities {
   .hero-image-container {
     position: relative;
-    border-radius: 9999px; /* rounded-full equivalent */
-    padding: 4px; /* Adjusted padding to control border thickness */
+    border-radius: 50%;
+    padding: 4px;
     background: conic-gradient(from var(--angle), #8B5CF6, #EC4899, #F59E0B, #8B5CF6);
     animation: spin 3s linear infinite;
-    display: inline-block; /* To make the background fit the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .hero-image-container img {
-    border-radius: 9999px; /* rounded-full equivalent */
-    display: block; /* Remove extra space below image */
-    background-color: #dbdcd5; /* To cover the center of the gradient and make it a border */
+    border-radius: 50%;
+    display: block;
+    background-color: #dbdcd5;
+    object-fit: cover;
   }
 }
 
@@ -29,6 +33,7 @@
   0% {
     --angle: 0deg;
   }
+
   100% {
     --angle: 360deg;
   }
@@ -36,7 +41,28 @@
 
 /* Custom scrollbar styles using tailwind-scrollbar plugin utilities */
 .custom-scrollbar {
-  @apply scrollbar-thin scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031]; /* Blue-gray thumb, very dark blue-gray track */
+  @apply scrollbar-thin scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031];
+  /* Blue-gray thumb, very dark blue-gray track */
 }
 
+body {
+  @apply bg-[#0e162a] text-white custom-scrollbar;
+}
 
+/* Fix for AOS animations conflicting with hover effects */
+[data-aos] {
+  overflow: visible !important;
+}
+
+/* Ensure cards can scale properly on hover - target only rounded cards, not sections */
+.rounded-xl.bg-\[\#2d4059\]:hover,
+.rounded-xl.bg-\[\#1c2a3f\]:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  transition: all 300ms ease-in-out !important;
+}
+
+.rounded-xl.bg-\[\#2d4059\],
+.rounded-xl.bg-\[\#1c2a3f\] {
+  transition: all 300ms ease-in-out !important;
+}

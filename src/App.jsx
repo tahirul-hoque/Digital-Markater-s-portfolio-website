@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import withbg from '/fahim withbg.jpg'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -5,32 +8,38 @@ import ContactForm from './components/ContactForm'
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
   return (
     <>
       <Navbar />
 
       {/* Main content wrapper with custom scrollbar */}
-      <div className="h-screen overflow-y-auto custom-scrollbar scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031]">
+      <div className="custom-scrollbar scrollbar-thumb-[#5f83cc] scrollbar-track-[#172031]">
 
         {/* Hero-section */}
         <div id="home" className={`pt-24 min-h-screen flex items-center p-4 bg-[#0e162a]`}>
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-8 lg:gap-24">
               {/* Image Section (now first) */}
-              <div className='hero-image-container'>
-                <img src={withbg} alt="digital marketer's profile" className='w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] lg:w-[35rem] lg:h-[35rem] xl:w-[40rem] xl:h-[40rem] rounded-full ' />
+              <div className='hero-image-container' data-aos="fade-left">
+                <img src={withbg} alt="digital marketer's profile" className='w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] lg:w-[35rem] lg:h-[35rem] xl:w-[45rem] xl:h-[45rem] 2xl:w-[55rem] 2xl:h-[55rem] rounded-full ' />
               </div>
 
               {/* Text Section (now second) */}
-              <div className="border-4 border-[#5f83cc] p-10 rounded-lg text-center lg:text-left lg:max-w-2xl xl:max-w-4xl xl:p-14">
+              <div className="border-4 border-[#5f83cc] p-10 rounded-lg text-center lg:text-left lg:max-w-2xl xl:max-w-3xl xl:p-14 2xl:max-w-4xl 2xl:p-16" data-aos="fade-right">
                 <div className="flex flex-col gap-4">
                   <div>
-                    <span className='font-sans text-lg font-thin text-[#5f83cc]'>Hey, I'm Fahmiduzzaman Fahim,</span> <br />
-                    <span className='font-sans text-3xl md:text-3xl font-extrabold text-white'>
+                    <span className='font-sans text-lg xl:text-xl 2xl:text-2xl font-thin text-[#5f83cc]'>Hey, I'm Fahmiduzzaman Fahim,</span> <br />
+                    <span className='font-sans text-3xl md:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold text-white'>
                       A Digital Marketing <br /> Architect with 5+ years of experience
                     </span>
                   </div>
-                  <div className='font-normal text-white'>
+                  <div className='font-normal text-base xl:text-lg 2xl:text-xl text-white'>
                     focused on building impactful brand identities and high-performing <br /> marketing systems. I specialize in creating data-driven strategies, <br /> compelling ad creatives, and optimized digital experiences that help <br /> businesses scale with confidence.
 
                     With expertise across social media <br /> marketing, paid campaigns, SEO, and brand design, I combine <br /> creativity with analytics to deliver work that captivates audiences <br /> and achieves real results. My approach is simple—understand <br /> the brand, design smart solutions, and execute with precision. <br />
@@ -49,11 +58,11 @@ function App() {
         <div id="services" className="bg-[#1c2a3f] py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="text-center mb-12 lg:text-left lg:pl-8">
-              <h2 className="text-4xl font-extrabold text-white text-center lg:text-left">My Services</h2>
+              <h2 className="text-4xl font-extrabold text-white text-center lg:text-left" data-aos="fade-up">My Services</h2>
 
             </div>
             <div className="flex flex-wrap justify-center lg:justify-around gap-8">
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-brands fa-google fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -65,7 +74,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-solid fa-magnifying-glass-chart fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -78,7 +87,7 @@ function App() {
               </div>
 
               {/* Card 7: Facebook Ad Campaign */}
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-brands fa-facebook fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -91,7 +100,7 @@ function App() {
               </div>
 
               {/* Card 3: Editor */}
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-solid fa-pen-to-square fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -103,7 +112,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-solid fa-palette fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -115,7 +124,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-solid fa-feather-pointed fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -127,7 +136,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4">
+              <div className="bg-[#2d4059] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/4 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <div className="text-center">
                   <i className="fa-solid fa-flask fa-3x text-[#5f83cc] mb-4"></i>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -148,14 +157,14 @@ function App() {
         <div id="reviews" className="bg-[#0e162a] py-16">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="text-center mb-12 lg:text-left lg:pl-8">
-              <h2 className="text-4xl font-extrabold text-white text-center lg:text-left">Client Success Stories</h2>
+              <h2 className="text-4xl font-extrabold text-white text-center lg:text-left" data-aos="fade-up">Client Success Stories</h2>
               <p className="mt-4 text-lg text-white">
                 Hear directly from clients who have experienced significant growth and results.
               </p>
             </div>
             <div className="flex flex-wrap justify-center lg:justify-around gap-8">
               {/* Testimonial Card 1 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Bro, honestly I'm really impressed with the way you handled the ad campaign. The targeting, planning and the results were way better than expected. Your dedication and professionalism are truly commendable. Looking forward to working with you again in the future."
@@ -164,7 +173,7 @@ function App() {
               </div>
 
               {/* Testimonial Card 2 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "Working with Fahmiduzzaman was a game-changer for our online presence. Our search engine rankings have improved dramatically, and. We're seeing a consistent increase in organic traffic. The SEO strategy was clear, effective, and delivered real, measurable results."
@@ -173,7 +182,7 @@ function App() {
               </div>
 
               {/* Testimonial Card 3 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The new brand identity and website design are stunning. It perfectly captures our company's ethos and has received amazing feedback from our customers. The attention to detail and creative vision were exceptional."
@@ -182,7 +191,7 @@ function App() {
               </div>
 
               {/* Testimonial Card 4 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The quality of the content writing is top-notch. Every blog post and piece of copy is well-researched, engaging, and perfectly aligned with our brand voice. Our content marketing has never been stronger."
@@ -191,7 +200,7 @@ function App() {
               </div>
 
               {/* Testimonial Card 5 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "From social media management to running complex ad campaigns, the level of expertise is outstanding. We've seen significant growth in engagement and conversions across all platforms. A true professional and a valuable partner."
@@ -200,7 +209,7 @@ function App() {
               </div>
 
               {/* Testimonial Card 6 */}
-              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3">
+              <div className="border border-transparent bg-[#1c2a3f] p-8 rounded-xl shadow-lg w-full sm:w-2/5 lg:w-1/3 hover:scale-105 hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-center">
                   <p className="text-white italic mb-4">
                     "The initial consultation and strategy session alone were incredibly valuable. The insights provided helped us refocus our marketing efforts and create a clear roadmap for success. Highly recommended for anyone looking for strategic guidance."
